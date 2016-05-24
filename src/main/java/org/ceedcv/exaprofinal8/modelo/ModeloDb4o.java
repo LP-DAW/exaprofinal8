@@ -43,34 +43,16 @@ public class ModeloDb4o implements IModelo {
     @Override
     public ArrayList<Telefono> readt() {
 
-        ArrayList<Telefono> telefonos = new ArrayList();
-        Telefono telefono;
+        //TODO
+        return null;
 
-        Telefono buscado;
-        buscado = new Telefono(0, null, null);
-        conectar();
-        ObjectSet res = bd.queryByExample(buscado);
-        while (res.hasNext()) {
-            telefono = (Telefono) res.next();
-            telefonos.add(telefono);
-        }
-        desconectar();
-        return telefonos;
     }
 
     @Override
     public ArrayList<Persona> readp() {
-        Persona persona;
-        ArrayList<Persona> personas = new ArrayList();
-        Persona buscado = new Persona(0, null);
-        conectar();
-        ObjectSet res = bd.queryByExample(buscado);
-        while (res.hasNext()) {
-            persona = (Persona) res.next();
-            personas.add(persona);
-        }
-        desconectar();
-        return personas;
+
+        //TODO
+        return null;
     }
 
     @Override
@@ -94,14 +76,7 @@ public class ModeloDb4o implements IModelo {
 
         ficherobdoo.delete();
 
-        Persona p1 = new Persona(1, "Paco");
-        Persona p2 = new Persona(2, "Juan");
-
-        Telefono t1 = new Telefono(1, "123", p1);
-        Telefono t2 = new Telefono(1, "456", p2);
-
-        create(t1);
-        create(t2);
+        //TODO
 
     }
 

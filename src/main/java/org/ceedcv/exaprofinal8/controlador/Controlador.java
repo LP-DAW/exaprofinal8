@@ -34,74 +34,26 @@ public class Controlador implements ActionListener {
     ArrayList<Persona> personas;
 
     Controlador(IModelo modelo, Vista vista) {
-        this.modelo = modelo;
-        this.vista = vista;
-        inicializaBotones();
-        vista.setVisible(true);
-        vista.setTitle("exaprofinal8");
-        vista.setLocationRelativeTo(null); // Centrar
+        //TODO
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        //ModeloA
-        //exportardeMysqlaFichero();
-        //ModeloB
-        exportardeDb4oaFichero();
-
+        //TODO
     }
 
+    //Modelo de examen A
     private void exportardeMysqlaFichero() {
-
-        vista.setTitle("exaprofinal8a - Mysql a Fichero");
-        modelo = new ModeloMysql();
-
-        personas = modelo.readp();
-        telefonos = modelo.readt();
-
-        modelo = new ModeloFichero();
-        modelo.iniciar();
-
-        Iterator it = telefonos.iterator();
-        while (it.hasNext()) {
-            Telefono telefono = (Telefono) it.next();
-            modelo.create(telefono);
-        }
-        it = personas.iterator();
-        while (it.hasNext()) {
-            Persona persona = (Persona) it.next();
-            modelo.create(persona);
-        }
-
+        //TODO
     }
 
+    //Modelo de examen B
     private void exportardeDb4oaFichero() {
-
-        vista.setTitle("exaprofinal8b - Db4o a Fichero");
-        modelo = new ModeloDb4o();
-        modelo.iniciar();
-
-        personas = modelo.readp();
-        telefonos = modelo.readt();
-
-        modelo = new ModeloFichero();
-        modelo.iniciar();
-
-        Iterator it = telefonos.iterator();
-        while (it.hasNext()) {
-            Telefono telefono = (Telefono) it.next();
-            modelo.create(telefono);
-        }
-        it = personas.iterator();
-        while (it.hasNext()) {
-            Persona persona = (Persona) it.next();
-            modelo.create(persona);
-        }
+        //TODO
     }
 
     private void inicializaBotones() {
-        vista.getImportar().addActionListener(this);
+        //TODO
     }
 
 }

@@ -25,9 +25,9 @@ public class ModeloFichero implements IModelo {
     public void create(Persona p) {
         try {
             FileWriter fw = new FileWriter(fp, true);
-            fw.write(p.getIdp() + ";" + p.getNom() + ";\n");
-            System.out.println("Grabada Persona en Fichero" + p);
-            fw.close();
+            //TODO
+
+
         } catch (IOException ex) {
             Logger.getLogger(ModeloFichero.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -37,9 +37,8 @@ public class ModeloFichero implements IModelo {
     public void create(Telefono t) {
         try {
             FileWriter fw = new FileWriter(ft, true);
-            fw.write(t.getIdt() + ";" + t.getNumero() + ";" + t.getPersona().getIdp() + ";\n");
-            System.out.println("Grabado Telefono en Fichero" + t);
-            fw.close();
+            //TODO
+
         } catch (IOException ex) {
             Logger.getLogger(ModeloFichero.class.getName()).log(Level.SEVERE, null, ex);
         }

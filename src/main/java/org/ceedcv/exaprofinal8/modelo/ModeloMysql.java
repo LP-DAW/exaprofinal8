@@ -71,28 +71,9 @@ public class ModeloMysql implements IModelo {
             rs = st.executeQuery(sql);
 
             while (rs.next()) {
-                Telefono telefono = new Telefono();
-                Persona persona = new Persona();
 
-                Integer idt;
-                String numero;
-                Integer idp;
-                String nombre;
+                //TODO
 
-                idt = rs.getInt("idt");
-                numero = rs.getString("numero");
-                idp = rs.getInt("idp");
-                nombre = rs.getString("nombre");
-
-                telefono.setIdt(idt);
-                telefono.setNumero(numero);
-
-                persona.setIdp(idp);
-                persona.setNom(nombre);
-
-                telefono.setPersona(persona);
-
-                telefonos.add(telefono);
             }
 
         } catch (SQLException se) {
@@ -120,18 +101,8 @@ public class ModeloMysql implements IModelo {
 
             while (rs.next()) {
 
-                Persona persona = new Persona();
+                //TODO
 
-                Integer idp;
-                String nombre;
-
-                idp = rs.getInt("idp");
-                nombre = rs.getString("nombre");
-
-                persona.setIdp(idp);
-                persona.setNom(nombre);
-
-                personas.add(persona);
             }
 
         } catch (SQLException se) {
